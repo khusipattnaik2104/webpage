@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  overflow:hidden;
+}
+
+.container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #3b82f6
+  );
+  padding:20px;
+}
+
+.card{
+  width:100%;
+  max-width:600px;
+  text-align:center;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(12px);
+  border-radius:25px;
+  padding:40px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.title{
+  font-size:3rem;
+  color:white;
+  margin-bottom:15px;
+  transition:0.4s;
+}
+
+.title:hover{
+  color:#facc15;
+  letter-spacing:2px;
+  text-shadow:0 0 20px #facc15;
+}
+
+.subtitle{
+  color:#e2e8f0;
+  margin-bottom:30px;
+  font-size:18px;
+  line-height:1.6;
+}
+
+.btn{
+  position:relative;
+  padding:15px 40px;
+  font-size:18px;
+  font-weight:700;
+  color:white;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  overflow:hidden;
+
+  background:linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  );
+
+  box-shadow:
+    0 8px 0 #0047ab,
+    0 15px 25px rgba(0,114,255,0.4);
+
+  transition:all 0.3s ease;
+}
+
+.btn::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+
+  transition:0.6s;
+}
+
+.btn:hover::before{
+  left:100%;
+}
+
+.btn:hover{
+  transform:
+    translateY(-6px)
+    scale(1.05);
+
+  box-shadow:
+    0 14px 0 #0047ab,
+    0 25px 35px rgba(0,114,255,0.5);
+}
+
+.btn:active{
+  transform:translateY(6px);
+
+  box-shadow:
+    0 2px 0 #0047ab,
+    0 5px 10px rgba(0,114,255,0.3);
+}
+
+.popup{
+  margin-top:25px;
+  padding:18px;
+  background:white;
+  color:#020a1d;
+  border-radius:15px;
+  font-weight:bold;
+  animation:popupAnimation .6s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes popupAnimation{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:768px){
+
+  .title{
+    font-size:2rem;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .card{
+    padding:25px;
+  }
+}

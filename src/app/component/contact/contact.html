@@ -1,0 +1,28 @@
+<h2>Contact Us</h2>
+
+<label>Name</label>
+<br>
+
+<input
+  type="text"
+  [(ngModel)]="name">
+
+<br><br>
+
+<label>Email</label>
+<br>
+
+<input
+  type="email"
+  [(ngModel)]="email">
+
+<br><br>
+
+<h3>Live Preview</h3>
+
+<p>Name: {{ name }}</p>
+<p>Email: {{ email }}</p>
+
+<button (click)="submitForm()">
+  Submit
+</button>

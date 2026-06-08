@@ -1,0 +1,74 @@
+<div class="hero-section">
+
+  <h1>Welcome to {{ companyName  }}</h1>
+
+  <p>
+    Dynamic Single Page Application built using Angular 20
+  </p>
+
+</div>
+
+<h2>Our Services</h2>
+
+<div class="card-container">
+
+  <div
+    class="service-card"
+    *ngFor="let service of services">
+
+    <h3>{{ service.title }}</h3>
+
+    <p>{{ service.description }}</p>
+
+    <button>
+      Learn More
+    </button>
+
+  </div>
+
+</div>
+
+<h2>Why Choose Us?</h2>
+
+<div class="features">
+
+  <div class="feature-card">
+    <h3>⚡ Fast Performance</h3>
+    <p>Real-time updates without page reloads.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>🔒 Secure Integration</h3>
+    <p>Seamless communication with backend REST APIs.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>♻ Reusable Components</h3>
+    <p>Modular architecture for easier maintenance.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>📱 Responsive Design</h3>
+    <p>Works smoothly across desktop and mobile devices.</p>
+  </div>
+
+</div>
+
+
+<h1>Welcome to ABC Solutions</h1>
+
+<h2>Users from API</h2>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} - {{ user.email }}
+  </li>
+</ul>
+
+<h2>Angular Tutorial</h2>
+
+<a
+  href="https://www.youtube.com/watch?v=3dHNOWTI7H8"
+  target="_blank">
+  Watch Angular Tutorial
+</a>

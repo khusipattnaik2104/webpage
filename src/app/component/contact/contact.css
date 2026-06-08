@@ -1,0 +1,137 @@
+/* Container Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: #0f0f1a; /* Matching dark theme background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glassmorphism/Card Box effect */
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  max-width: 900px;
+  width: 100%;
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Left Section: Info Panel */
+.contact-info {
+  background: linear-gradient(135deg, #1f1f3a, #1a1a2e);
+  padding: 3rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #2a2a4a;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00fff0; /* Accent color matching navbar */
+}
+
+.contact-info p {
+  color: #a0a0c0;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #e0e0e0;
+}
+
+.info-item .icon {
+  font-size: 1.2rem;
+}
+
+/* Right Section: Form Panel */
+.contact-form-wrapper {
+  padding: 3rem;
+  background-color: #16162a;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: #a0a0c0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group textarea {
+  background-color: #1f1f3a;
+  border: 1px solid #2a2a4a;
+  padding: 0.8rem;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus States */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #00fff0;
+  box-shadow: 0 0 8px rgba(0, 255, 240, 0.2);
+}
+
+/* Submit Button styling */
+.btn-submit {
+  background-color: #00fff0;
+  color: #1a1a2e;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 255, 240, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info, 
+  .contact-form-wrapper {
+    padding: 2rem;
+  }
+}

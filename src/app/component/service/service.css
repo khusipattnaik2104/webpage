@@ -1,0 +1,106 @@
+.services-section {
+    min-height: 100vh;
+    padding: 80px 30px;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+/* 3D Hover Effect */
+
+.service-card:hover {
+    transform: perspective(1000px)
+               rotateX(10deg)
+               rotateY(-10deg)
+               translateY(-15px)
+               scale(1.05);
+
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 60px #00ffff;
+
+    border-color: #00ffff;
+}
+
+/* Different Glow Colors */
+
+.service-card:nth-child(2):hover {
+    box-shadow: 0 0 25px #ff00ff,
+                0 0 50px #ff00ff;
+}
+
+.service-card:nth-child(3):hover {
+    box-shadow: 0 0 25px #00ff88,
+                0 0 50px #00ff88;
+}
+
+.service-card:nth-child(4):hover {
+    box-shadow: 0 0 25px #ff9800,
+                0 0 50px #ff9800;
+}
+
+.service-card:nth-child(5):hover {
+    box-shadow: 0 0 25px #ff4d6d,
+                0 0 50px #ff4d6d;
+}
+
+.service-card:nth-child(6):hover {
+    box-shadow: 0 0 25px #7c4dff,
+                0 0 50px #7c4dff;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.service-card {
+    animation: float 4s ease-in-out infinite;
+}
